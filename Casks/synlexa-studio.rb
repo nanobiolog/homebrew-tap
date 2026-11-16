@@ -1,6 +1,6 @@
 cask "synlexa-studio" do
-  version "0.4.1"
-  sha256 "ccc881832eb4cbac3350efdb9b918bdc7231b39732f6ccd314bb957375f23052"
+  version "0.4.2"
+  sha256 "25352e34616e3839179e68278186493a8e523499081dfc8099a963f71c9221f6"
 
   url "https://github.com/Synlexa/synlexa-studio/releases/download/v#{version}/Synlexa-Studio-v#{version}-universal-apple-darwin.dmg"
   name "Synlexa Studio"
