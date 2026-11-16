@@ -1,18 +1,20 @@
 # Synlexa Homebrew Tap
 
-Official Homebrew tap for **Synlexa Studio** (`Research-Use-Only`).
+Official Homebrew tap for **Synlexa Studio** (`Apache-2.0`, `Research-Use-Only`).
 
 ## Install
 
 ```bash
-brew tap nanobiolog/tap
+brew tap Synlexa/tap
 brew install synlexa-studio
 ```
 
 Or install the macOS `.app` bundle via Cask:
 
 ```bash
-brew install --cask nanobiolog/tap/synlexa-studio
+brew install --cask Synlexa/tap/synlexa-studio
 ```
+
+Source repository: https://github.com/Synlexa/synlexa-studio
 
 > Intended use: For research and development use. Not for diagnostic or treatment decisions.

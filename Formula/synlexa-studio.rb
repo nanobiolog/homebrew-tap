@@ -1,22 +1,22 @@
 class SynlexaStudio < Formula
-  desc "Deterministic structural biology, peptide, CRISPR, SMILES, and MCP workbench (Research-Use-Only)"
+  desc "Deterministic structural biology, peptide, CRISPR, SMILES, and MCP workbench"
   homepage "https://www.synlexa.com/download"
-  version "0.3.0"
-  license "Proprietary"
+  version "0.4.0"
+  license "Apache-2.0"
 
   on_macos do
-    url "https://studio.synlexa.com/releases/synlexa-studio-v#{version}-universal-apple-darwin.tar.gz"
-    sha256 "8d1557e9827e6a4c0f57929766f0457436f9dc19c133b0dcec118f1a22f68815"
+    url "https://github.com/Synlexa/synlexa-studio/releases/download/v#{version}/synlexa-studio-v#{version}-universal-apple-darwin.tar.gz"
+    sha256 "a151254af8fa938d3e327e623dc310a722811fcbc540738a8c2679afadf94d21"
   end
 
   on_linux do
     on_intel do
-      url "https://studio.synlexa.com/releases/synlexa-studio-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "575e9ec8cfcbd800675338dbc0b0cedcd91bfd79af4a7e7415b354b998f40b8d"
+      url "https://github.com/Synlexa/synlexa-studio/releases/download/v#{version}/synlexa-studio-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "bb0c4d8364be01f6c645c3e1d995df87db8919afb6579d66bbbe5ba1b88e6372"
     end
     on_arm do
-      url "https://studio.synlexa.com/releases/synlexa-studio-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "ecb58cb1e5cc2dd8b17408081e19f7ee8935a619735c1e1985c252c99ba2abce"
+      url "https://github.com/Synlexa/synlexa-studio/releases/download/v#{version}/synlexa-studio-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "f869fae356e1a36d3f95268efef69f4af82c893953799154342bdb1ba7b9016d"
     end
   end
 
@@ -25,7 +25,7 @@ class SynlexaStudio < Formula
     (bin/"synlexa-studio").write <<~EOS
       #!/usr/bin/env bash
       set -euo pipefail
-      if [[ "${1:-}" == "mcp" || "${1:-}" == "inspect" || "${1:-}" == "compare" || "${1:-}" == "peptide" || "${1:-}" == "gene" || "${1:-}" == "smiles" || "${1:-}" == "ramachandran" ]]; then
+      if [[ "${1:-}" == "mcp" || "${1:-}" == "inspect" || "${1:-}" == "compare" || "${1:-}" == "peptide" || "${1:-}" == "gene" || "${1:-}" == "smiles" || "${1:-}" == "ramachandran" || "${1:-}" == "--version" || "${1:-}" == "-V" || "${1:-}" == "version" ]]; then
         exec "#{libexec}/bin/studio-cli" "$@"
       fi
       exec "#{libexec}/bin/synlexa-studio-desktop-native" --dist "#{libexec}/web-dist" "$@"
