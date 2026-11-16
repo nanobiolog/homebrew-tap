@@ -1,22 +1,22 @@
 class SynlexaStudio < Formula
   desc "Deterministic structural biology, peptide, CRISPR, SMILES, and MCP workbench"
   homepage "https://www.synlexa.com/download"
-  version "0.4.3"
+  version "0.4.4"
   license "Apache-2.0"
 
   on_macos do
     url "https://github.com/Synlexa/synlexa-studio/releases/download/v#{version}/synlexa-studio-v#{version}-universal-apple-darwin.tar.gz"
-    sha256 "911da9e0547c8ab8bbf8269c9f83cb96548b5b2877e5a77503dcf32a50f5a819"
+    sha256 "84127acfc7238f99ff1f08ff10fcb6cf6f5e6dc6d31abe22465b4a8e647c8878"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/Synlexa/synlexa-studio/releases/download/v#{version}/synlexa-studio-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7209c4fdfa326bf14837859ed12da19426a59d2e35637a570c516255a59b3921"
+      sha256 "4ddf9104e8a5fc37495e91fab29257b19414faf70bcecbe83e6e1bf365a480f4"
     end
     on_arm do
       url "https://github.com/Synlexa/synlexa-studio/releases/download/v#{version}/synlexa-studio-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0336b4aa88927fcd02c72b8ecf7d897cb7c04a54415fcfb9cdf9c7c1633640fb"
+      sha256 "3fdd6a0596387b9d5059446e5b098f2366530c9928058a734b4021fa2e337249"
     end
   end
 
